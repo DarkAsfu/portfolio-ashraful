@@ -22,7 +22,7 @@ const NavBar = () => {
                                     fill="currentColor"
                                 />
                             </svg> */}
-                            <h1 className='text-4xl font-extrabold'>ASHRAFUL</h1>
+                            <h1 className='text-3xl md:text-4xl font-extrabold'>ASHRAFUL</h1>
                         </a>
                     </div>
 
