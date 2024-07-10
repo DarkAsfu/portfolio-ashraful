@@ -17,7 +17,7 @@ const Blogs = () => {
             <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-10 mb-10">
 
                 {
-                    blogs.map(blog => <div key={blog._id} className="rounded-md border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
+                    blogs.slice(0,8).map(blog => <div key={blog._id} className="rounded-md border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
                         <div className="img rounded-full flex justify-between">
                             <img className='rounded-full w-8' src={blog.publisher_img ? blog.publisher_img : "https://i.ibb.co/2qr381T/user-1.png"} alt="" />
                             <Link to={blog._id} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black hidden group-hover:flex items-center transition-all rounded-full text-[14px] px-2" type="button">Read Post <LuExternalLink className="rotate-1 text-md" /></Link>
