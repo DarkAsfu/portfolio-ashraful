@@ -67,9 +67,9 @@ const TechStack = () => {
             <h1 className="text-4xl font-extrabold text-center">My Techonology Stack</h1>
             <div className="w-10/12 mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-7 gap-4 mt-8 align-middle items-center">
                 {
-                    skills.map((skill, idx) => <div className="bg-[#0d948915] h-full px-8 py-6 text-center rounded-md" key={idx}>
-                        <img className="w-16 mx-auto" src={skill.iconLink} alt="" />
-                        <h1 className="mt-2">{skill.name}</h1>
+                    skills.map((skill, idx) => <div className="bg-[#0d948915] h-full px-8 py-6 text-center rounded-md hover:bg-[#0d948945] border-2 border-[#0d948945] hover:border-[#0D9488] transition-all" key={idx}>
+                        <img className="w-10 md:w-16 mx-auto" src={skill.iconLink} alt="" />
+                        <h1 className="mt-2 text-[14px] md:text-[16px]">{skill.name}</h1>
                     </div>)
                 }
             </div>
