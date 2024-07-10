@@ -14,7 +14,7 @@ const Blogs = () => {
     return (
         <>
             <h1 className="text-4xl font-extrabold text-center mb-10">My Recent Blogs</h1>
-            <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-5 gap-4 mb-10">
+            <div className="w-10/12 mx-auto grid grid-cols-1 md:grid-cols-4 lg:grid-cols-4 gap-10 mb-10">
 
                 {
                     blogs.map(blog => <div key={blog._id} className="rounded-md border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
