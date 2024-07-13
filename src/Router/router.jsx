@@ -3,6 +3,9 @@ import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 import Blogs from "../Pages/Blogs/Blogs";
 import Error from "../Components/Error/Error";
+import Dashboard from "../Layout/Dashboard";
+import DashboardHome from "../Components/DashboardHome/DashboardHome";
+import AddProjects from "../Pages/AddProjects/AddProjects";
 
 const router = createBrowserRouter([
     {
@@ -23,6 +26,20 @@ const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: "/dashboard",
+        element: <Dashboard/>,
+        children: [
+            {
+                path: "/dashboard",
+                element: <DashboardHome/>
+            },
+            {
+                path: "addprojects",
+                element: <AddProjects/>
+            }
+        ]
+    }
 ]);
 
 export default router
