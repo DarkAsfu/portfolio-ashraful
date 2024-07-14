@@ -47,12 +47,12 @@ const AddProjects = () => {
     // };
     const handleDescriptionChange = (e) => {
         const { value } = e.target;
-        setFormData({ 
-            ...formData, 
-            features: value.split(/[|]/).map(feature => feature.trim()) 
+        setFormData({
+            ...formData,
+            features: value.split(/[|]/).map(feature => feature.trim())
         });
     };
-    
+
     const handleSkillChange = (e) => {
         setFormData({ ...formData, skillInput: e.target.value });
     };
@@ -266,7 +266,6 @@ const AddProjects = () => {
                         {(categories) => <SelectItem>{categories.label}</SelectItem>}
                     </Select>
                     <Input
-                        isRequired
                         type="text"
                         label="Live Link"
                         name="liveLink"
@@ -277,7 +276,6 @@ const AddProjects = () => {
                         onChange={handleChange}
                     />
                     <Input
-                        isRequired
                         type="text"
                         label="GitHub Client"
                         name="githubClient"
@@ -288,7 +286,6 @@ const AddProjects = () => {
                         onChange={handleChange}
                     />
                     <Input
-                        isRequired
                         type="text"
                         label="GitHub Server"
                         name="githubServer"
