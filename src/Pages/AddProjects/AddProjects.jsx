@@ -41,11 +41,18 @@ const AddProjects = () => {
         setFormData({ ...formData, tags: value.split(',').map(tag => tag.trim()) });
     };
 
+    // const handleDescriptionChange = (e) => {
+    //     const { value } = e.target;
+    //     setFormData({ ...formData, features: value.split(',').map(feature => feature.trim()) });
+    // };
     const handleDescriptionChange = (e) => {
         const { value } = e.target;
-        setFormData({ ...formData, features: value.split(',').map(feature => feature.trim()) });
+        setFormData({ 
+            ...formData, 
+            features: value.split(/[|]/).map(feature => feature.trim()) 
+        });
     };
-
+    
     const handleSkillChange = (e) => {
         setFormData({ ...formData, skillInput: e.target.value });
     };
@@ -116,7 +123,7 @@ const AddProjects = () => {
             console.log('Form Data:', projectData);
 
             // Send projectData to the server
-            await fetch('http://localhost:5000/projects', {
+            await fetch('https://ashrafulislambackend.vercel.app/projects', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -220,7 +227,7 @@ const AddProjects = () => {
                         name="features"
                         placeholder="Enter description separated by commas"
                         className="mt-3 col-span-2"
-                        value={formData.features.join(', ')}
+                        value={formData.features.join(' | ')}
                         onChange={handleDescriptionChange}
                     />
                     <Textarea
