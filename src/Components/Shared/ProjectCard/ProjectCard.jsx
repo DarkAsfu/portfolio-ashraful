@@ -29,7 +29,10 @@ const ProjectCard = (params) => {
                             </CardBody>
                             <CardFooter className="text-small justify-between ">
                                 <Link href={project.githubClient} className="text-[f8f8f8] text-[16px] gap-1 hover:bg-[#0D9488] p-1 text-[#0D9488] hover:text-[#fff] rounded-full transition-all">Client <FaGithub /></Link>
-                                <Link href={project.githubServer} className="text-[f8f8f8] text-[16px] gap-1 hover:bg-[#0D9488] p-1 text-[#0D9488] hover:text-[#fff] rounded-full transition-all">Server <FaGithub /></Link>
+                                {
+                                    project.githubServer &&
+                                    <Link href={project.githubServer} className="text-[f8f8f8] text-[16px] gap-1 hover:bg-[#0D9488] p-1 text-[#0D9488] hover:text-[#fff] rounded-full transition-all">Server <FaGithub /></Link>
+                                }
                                 <Link href={project.liveLink} className="text-[f8f8f8] text-[16px] gap-1 hover:bg-[#0D9488] p-1 text-[#0D9488] hover:text-[#fff] rounded-full transition-all">Live <LuLink /></Link>
                             </CardFooter>
                         </Card>)
