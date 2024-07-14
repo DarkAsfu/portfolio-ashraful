@@ -61,7 +61,6 @@ const TechStack = () => {
             "iconLink": "https://i.ibb.co/yW77K9T/github-sign.png"
         }
     ]
-    console.log(skills);
     return (
         <div className="mb-20 mt-20 px-4">
             <h1 className="text-4xl font-extrabold text-center">My Techonology Stack</h1>

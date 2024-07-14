@@ -1,5 +1,16 @@
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
+import { Tabs, Tab, Card, CardBody, CardFooter, Link } from "@nextui-org/react";
+import { CardHeader, Image } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import { LuLink } from "react-icons/lu";
+import { FaGithub } from "react-icons/fa6";
 const Projects = () => {
+    const [projects, setProjects] = useState([]);
+    useEffect(() => {
+        fetch('https://ashrafulislambackend.vercel.app/projects')
+            .then(res => res.json())
+            .then(data => setProjects(data))
+    }, [])
+    // console.log(projects[0].projectImgs[0]);
     return (
         <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10">
             <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
@@ -8,48 +19,31 @@ const Projects = () => {
                     <Card className="rounded-md">
                         <CardBody className="bg-[#0d948915]">
                             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 py-10 px-2">
-                            <a href="#" className="group relative block h-64 sm:h-80 lg:h-96">
-                                <span className="absolute inset-0 border-2 border-dashed border-[#0d948945]"></span>
-
-                                <div
-                                    className="relative flex h-full transform items-end border-2 border-[#0d948945] bg-[#0d948915] transition-transform group-hover:-translate-x-2 group-hover:-translate-y-2"
-                                >
-                                    <div
-                                        className="p-4 !pt-0 transition-opacity group-hover:absolute group-hover:opacity-0 sm:p-6 lg:p-8"
-                                    >
-                                        <svg
-                                            xmlns="http://www.w3.org/2000/svg"
-                                            className="size-10 sm:size-12"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                        >
-                                            <path
-                                                strokeLinecap="round"
-                                                strokeLinejoin="round"
-                                                strokeWidth="2"
-                                                d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                                {
+                                    projects.map(project => <Card isHoverable={true} key={project._id} className="py-4">
+                                        <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                                            <p className="text-tiny uppercase font-bold">{project.projectTitle}</p>
+                                            <small className="text-default-500">{project.projectDescription.slice(0, 100)}.. <Link href='/projectdetails' className="text-[14px]">See Details</Link></small>
+                                            {/* <h4 className="font-bold text-large">Frontend Radio</h4> */}
+                                        </CardHeader>
+                                        <CardBody className="overflow-visible py-2">
+                                            <Image
+                                                isHoverable={true}
+                                                isBlurred={true}
+                                                alt="Card background"
+                                                className="object-cover rounded-xl h-[125px] w-[400px]"
+                                                src={`${project.projectImg ? project.projectImg : project.projectImgs}`}
+                                                // width={270}
+                                                
                                             />
-                                        </svg>
-
-                                        <h2 className="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h2>
-                                    </div>
-
-                                    <div
-                                        className="absolute p-4 opacity-0 transition-opacity group-hover:relative group-hover:opacity-100 sm:p-6 lg:p-8"
-                                    >
-                                        <h3 className="mt-4 text-xl font-medium sm:text-2xl">Go around the world</h3>
-
-                                        <p className="mt-4 text-sm sm:text-base">
-                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate, praesentium voluptatem
-                                            omnis atque culpa repellendus.
-                                        </p>
-
-                                        <p className="mt-8 font-bold">Read more</p>
-                                    </div>
-                                </div>
-                            </a>
-                            
+                                        </CardBody>
+                                        <CardFooter className="text-small justify-between ">
+                                            <Link href={project.githubClient} className="text-[f8f8f8] text-[16px] gap-1">Client <FaGithub /></Link>
+                                            <Link href={project.githubServer} className="text-[f8f8f8] text-[16px] gap-1">Server <FaGithub /></Link>
+                                            <Link href={project.liveLink} className="text-[f8f8f8] text-[16px] gap-1">Live <LuLink /></Link>
+                                        </CardFooter>
+                                    </Card>)
+                                }
                             </div>
                         </CardBody>
                     </Card>
