@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Input } from "@nextui-org/input";
 import { Textarea, Button, Chip } from "@nextui-org/react";
 import Swal from 'sweetalert2';
-
+import { Select, SelectItem } from "@nextui-org/react";
 const img_hosting_token = import.meta.env.VITE_ImageUpload_Token;
 
 const AddProjects = () => {
@@ -21,9 +21,14 @@ const AddProjects = () => {
         features: [],
         technologies: [],
         skillInput: '',
-        projectImgs: []
+        projectImgs: [],
+        categories: ''
     });
-
+    const categories = [
+        { key: "mern", label: "MERN" },
+        { key: "react", label: "ReactJs" },
+        { key: "backend", label: "Backend" },
+    ]
     const [imagePreviews, setImagePreviews] = useState([]);
 
     const handleChange = (e) => {
@@ -242,6 +247,17 @@ const AddProjects = () => {
                         value={formData.demo}
                         onChange={handleChange}
                     />
+                    <Select
+                        items={categories}
+                        label="Project category"
+                        placeholder="Select an categories"
+                        className="mt-3"
+                        name='categories'
+                        value={formData.categories}
+                        onChange={handleChange}
+                    >
+                        {(categories) => <SelectItem>{categories.label}</SelectItem>}
+                    </Select>
                     <Input
                         isRequired
                         type="text"
@@ -275,17 +291,7 @@ const AddProjects = () => {
                         value={formData.githubServer}
                         onChange={handleChange}
                     />
-                    <Input
-                        isRequired
-                        type="text"
-                        label="Role"
-                        name="role"
-                        placeholder="Enter your role"
-                        className="mt-3"
-                        size='md'
-                        value={formData.role}
-                        onChange={handleChange}
-                    />
+
                     <Textarea
                         label="Tags"
                         name="tags"
@@ -295,6 +301,17 @@ const AddProjects = () => {
                         onChange={handleTagsChange}
                     />
                 </div>
+                <Input
+                    isRequired
+                    type="text"
+                    label="Role"
+                    name="role"
+                    placeholder="Enter your role"
+                    className="mt-3"
+                    size='md'
+                    value={formData.role}
+                    onChange={handleChange}
+                />
                 <div className="flex justify-center mt-6">
                     {
                         loading ? <Button color="primary" isLoading className="px-10">
