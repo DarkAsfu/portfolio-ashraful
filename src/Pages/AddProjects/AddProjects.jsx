@@ -255,6 +255,7 @@ const AddProjects = () => {
                         onChange={handleChange}
                     />
                     <Select
+                        isRequired
                         items={categories}
                         label="Project category"
                         placeholder="Select an categories"
@@ -306,7 +307,7 @@ const AddProjects = () => {
                     />
                 </div>
                 <Input
-                    isRequired
+                    
                     type="text"
                     label="Role"
                     name="role"
