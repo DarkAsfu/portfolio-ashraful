@@ -6,6 +6,7 @@ import Error from "../Components/Error/Error";
 import Dashboard from "../Layout/Dashboard";
 import DashboardHome from "../Components/DashboardHome/DashboardHome";
 import AddProjects from "../Pages/AddProjects/AddProjects";
+import BlogDetails from "../Components/Blogs/BlogDetails";
 
 const router = createBrowserRouter([
     {
@@ -19,6 +20,11 @@ const router = createBrowserRouter([
             {
                 path: "/blogs",
                 element: <Blogs/>
+            },
+            {
+                path: '/blogs/:id',
+                element: <BlogDetails/>,
+                loader: ({params}) => fetch(`https://learner-cafe-server.vercel.app/blogs/${params.id}`)
             },
             {
                 path: '*',

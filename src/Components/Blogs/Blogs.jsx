@@ -1,26 +1,34 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
-
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 const Blogs = () => {
+    const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [blogs, setBlogs] = useState([]);
+    const [selectedBlog, setSelectedBlog] = useState(null);
+
     useEffect(() => {
         fetch('https://learner-cafe-server.vercel.app/blogs')
             .then(res => res.json())
             .then(blogs => {
                 setBlogs(blogs);
-            })
-    }, [])
+            });
+    }, []);
+
+    const handleOpenModal = (blog) => {
+        setSelectedBlog(blog);
+        onOpen();
+    };
     return (
         <>
             <h1 className="text-4xl px-4 font-extrabold text-center mb-10">My Recent Blogs</h1>
             <div className="max-w-screen-xl px-4 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
 
                 {
-                    blogs.slice(0,8).map(blog => <div key={blog._id} className="rounded-md border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
+                    blogs.slice(0, 8).map(blog => <div key={blog._id} className="rounded-lg border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
                         <div className="img rounded-full flex justify-between">
                             <img className='rounded-full w-8' src={blog.publisher_img ? blog.publisher_img : "https://i.ibb.co/2qr381T/user-1.png"} alt="" />
-                            <Link to={blog._id} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black hidden group-hover:flex items-center transition-all rounded-full text-[14px] px-2" type="button">Read Post <LuExternalLink className="rotate-1 text-md" /></Link>
+                            <Link to={`blogs/${blog._id}`} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black hidden group-hover:flex items-center transition-all rounded-full text-[14px] px-2" type="button">Read Post <LuExternalLink className="rotate-1 text-md" /></Link>
                         </div>
                         <h3 className='text-[18px] leading-7 font-bold text-[#0E1217]'>{blog?.title}</h3>
                         <p className='text-[#525866] text-[13px] leading-[18px] mb-1'>{blog.date}</p>
@@ -35,9 +43,37 @@ const Blogs = () => {
                             <Link>
                                 <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 p-1 hover:bg-[#ff7a2b52] hover:text-[#fa6620] rounded-md transition-all"><path d="M15.874 3H8.126a3.357 3.357 0 00-3.35 3.152l-.772 12.77c-.028.459.106.915.38 1.286l.101.125c.666.764 1.818.9 2.647.287L12 17.023l4.868 3.597a1.964 1.964 0 003.128-1.7l-.771-12.767A3.358 3.358 0 0015.874 3zm0 1.5c.981 0 1.794.764 1.854 1.744l.771 12.768a.464.464 0 01-.74.402l-5.207-3.848a.929.929 0 00-1.104 0L6.24 19.414a.464.464 0 01-.74-.402l.773-12.768c.06-.98.872-1.744 1.853-1.744h7.748z" fill="currentcolor" fillRule="evenodd"></path></svg>
                             </Link>
-                            <Link>
-                                <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 p-1 hover:bg-[#c029f052] hover:text-[#ac1de4] rounded-md transition-all"><path d="M13.2 4.096a3.743 3.743 0 015.148-.137l.144.137 1.412 1.412a3.743 3.743 0 01.137 5.148l-.137.144-4.023 4.023a3.743 3.743 0 01-5.148.137l-.144-.137-.706-.706a.749.749 0 01.982-1.125l.076.067.706.705c.84.84 2.181.876 3.063.105l.113-.105 4.022-4.022c.84-.84.876-2.181.105-3.064l-.105-.112-1.411-1.411a2.246 2.246 0 00-3.063-.105l-.113.105L13.2 6.213a.749.749 0 01-1.126-.982l.067-.076L13.2 4.096zM8.119 9.177a3.743 3.743 0 015.148-.137l.144.137.706.706a.749.749 0 01-.982 1.125l-.076-.067-.706-.705a2.246 2.246 0 00-3.063-.105l-.113.105-4.022 4.022a2.246 2.246 0 00-.105 3.064l.105.112 1.411 1.411c.84.84 2.181.876 3.063.105l.113-.105 1.058-1.058a.749.749 0 011.126.982l-.067.076-1.059 1.059a3.743 3.743 0 01-5.148.137l-.144-.137-1.412-1.412a3.743 3.743 0 01-.137-5.148l.137-.144L8.12 9.177z" fill="currentcolor" fillRule="evenodd"></path></svg>
+                            <Link onClick={() => handleOpenModal(blog)}>
+                                <svg width="1em" height="1em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" className="w-7 h-7 p-1 hover:bg-[#c029f052] hover:text-[#ac1de4] rounded-md transition-all">
+                                    <path d="M13.2 4.096a3.743 3.743 0 015.148-.137l.144.137 1.412 1.412a3.743 3.743 0 01.137 5.148l-.137.144-4.023 4.023a3.743 3.743 0 01-5.148.137l-.144-.137-.706-.706a.749.749 0 01.982-1.125l.076.067.706.705c.84.84 2.181.876 3.063.105l.113-.105 4.022-4.022c.84-.84.876-2.181.105-3.064l-.105-.112-1.411-1.411a2.246 2.246 0 00-3.063-.105l-.113.105L13.2 6.213a.749.749 0 01-1.126-.982l.067-.076L13.2 4.096zM8.119 9.177a3.743 3.743 0 015.148-.137l.144.137.706.706a.749.749 0 01-.982 1.125l-.076-.067-.706-.705a2.246 2.246 0 00-3.063-.105l-.113.105-4.022 4.022a2.246 2.246 0 00-.105 3.064l.105.112 1.411 1.411c.84.84 2.181.876 3.063.105l.113-.105 1.058-1.058a.749.749 0 011.126.982l-.067.076-1.059 1.059a3.743 3.743 0 01-5.148.137l-.144-.137-1.412-1.412a3.743 3.743 0 01-.137-5.148l.137-.144L8.12 9.177z" fill="currentcolor" fillRule="evenodd" />
+                                </svg>
                             </Link>
+                            <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+                                <ModalContent>
+                                    {onClose => (
+                                        <>
+                                            <ModalHeader className="flex flex-col gap-1">{selectedBlog?.title}</ModalHeader>
+                                            <ModalBody>
+                                                <Link to={`http://localhost:5173/blogs/${selectedBlog?._id}`}>
+                                                    localhost:5173/blogs/{selectedBlog?._id}
+                                                </Link>
+                                            </ModalBody>
+                                            <ModalFooter>
+                                                <Button
+                                                    color="primary"
+                                                    variant="light"
+                                                    onPress={() => {
+                                                        navigator.clipboard.writeText(`http://localhost:5173/blogs/${selectedBlog?._id}`);
+                                                    }}
+                                                >
+                                                    Copy Link
+                                                </Button>
+                                            </ModalFooter>
+                                        </>
+                                    )}
+                                </ModalContent>
+                            </Modal>
+
                         </div>
                     </div>)
                 }

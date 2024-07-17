@@ -40,11 +40,6 @@ const AddProjects = () => {
         const { value } = e.target;
         setFormData({ ...formData, tags: value.split(',').map(tag => tag.trim()) });
     };
-
-    // const handleDescriptionChange = (e) => {
-    //     const { value } = e.target;
-    //     setFormData({ ...formData, features: value.split(',').map(feature => feature.trim()) });
-    // };
     const handleDescriptionChange = (e) => {
         const { value } = e.target;
         setFormData({
