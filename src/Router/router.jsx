@@ -7,6 +7,7 @@ import Dashboard from "../Layout/Dashboard";
 import DashboardHome from "../Components/DashboardHome/DashboardHome";
 import AddProjects from "../Pages/AddProjects/AddProjects";
 import BlogDetails from "../Components/Blogs/BlogDetails";
+import Project from "../Pages/Project/Project";
 
 const router = createBrowserRouter([
     {
@@ -16,6 +17,11 @@ const router = createBrowserRouter([
             {
                 path: "/",
                 element: <Home/>
+            },
+            {
+                path: "/project/:title",
+                element: <Project/>,
+                loader: ({params}) => fetch(`https://ashrafulislambackend.vercel.app/project/${params.title}`)
             },
             {
                 path: "/blogs",

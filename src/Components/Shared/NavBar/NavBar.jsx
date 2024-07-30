@@ -14,7 +14,7 @@ const NavBar = () => {
             <div className="md:mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 md:border md:rounded-md md:mt-4 bg-[#ffffff34]">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
-                        <a className="block text-teal-600" href="#">
+                        <a className="block text-teal-600" href="/">
                             <span className="sr-only">Home</span>
                             <h1 className='text-3xl md:text-4xl font-extrabold'>ASHRAFUL</h1>
                         </a>
@@ -27,12 +27,12 @@ const NavBar = () => {
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
                                 </li>
 
-                                <li>
+                                {/* <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/#test"> Services </a>
-                                </li>
+                                </li> */}
 
                                 <li>
-                                    <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Portfolio </a>
+                                    <a className="text-gray-500 transition hover:text-gray-500/75" href="/#projects"> Portfolio </a>
                                 </li>
 
                                 <li>
