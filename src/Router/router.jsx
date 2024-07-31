@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: "/project/:title",
                 element: <Project/>,
-                loader: ({params}) => fetch(`https://ashrafulislambackend.vercel.app/project/${params.title}`)
+                loader: ({params}) => fetch(`http://localhost:5000/project/${params.title}`)
             },
             {
                 path: "/blogs",

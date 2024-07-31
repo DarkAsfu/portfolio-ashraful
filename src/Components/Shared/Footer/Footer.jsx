@@ -1,6 +1,6 @@
 const Footer = () => {
     return (
-        <footer className="bg-white">
+        <footer className="bg-[#f9f9f9b9]">
             <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-0">
                 <div className="lg:grid lg:grid-cols-2">
                     <div

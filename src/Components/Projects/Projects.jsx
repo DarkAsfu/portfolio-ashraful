@@ -4,7 +4,7 @@ import ProjectCard from "../Shared/ProjectCard/ProjectCard";
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch('https://ashrafulislambackend.vercel.app/projects')
+        fetch('http://localhost:5000/projects')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])
