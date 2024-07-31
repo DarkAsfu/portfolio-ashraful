@@ -21,7 +21,7 @@ const router = createBrowserRouter([
             {
                 path: "/project/:title",
                 element: <Project/>,
-                loader: ({params}) => fetch(`http://localhost:5000/project/${params.title}`)
+                loader: ({params}) => fetch(`https://portfolio-backend-0y27.onrender.com/project/${params.title}`)
             },
             {
                 path: "/blogs",

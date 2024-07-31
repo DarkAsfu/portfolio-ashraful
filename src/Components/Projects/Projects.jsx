@@ -4,7 +4,7 @@ import ProjectCard from "../Shared/ProjectCard/ProjectCard";
 const Projects = () => {
     const [projects, setProjects] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/projects')
+        fetch('https://portfolio-backend-0y27.onrender.com/projects')
             .then(res => res.json())
             .then(data => setProjects(data))
     }, [])
