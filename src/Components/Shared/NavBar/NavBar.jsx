@@ -87,7 +87,7 @@ const NavBar = () => {
                 </div>
             </div>
             {isMobileMenuOpen && (
-                <div className="absolute top-full left-0 w-full bg-white z-60">
+                <div className="absolute top-full left-0 w-full bg-white z-60 border-[#0d948964] border-b-2 border-l-2 border-r-2">
                     <nav aria-label="Global" className="bg-white">
                         <ul className="flex flex-col items-start gap-4 p-4 text-sm">
                             <li>
