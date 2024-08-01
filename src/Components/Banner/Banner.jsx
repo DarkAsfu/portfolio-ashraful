@@ -20,7 +20,7 @@ const Banner = () => {
                             <div className="mt-8 flex flex-wrap justify-center gap-4">
                                 <a  download
                                     className="block w-full rounded bg-[#0D9488] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#0D9488] focus:outline-none focus:ring active:bg-[#33a89e] sm:w-auto"
-                                    href="../../../public/MERN_Stack_Developer_Ashraful_Islam (1).pdf"
+                                    href="/../../public/MERN_Stack_Developer_Ashraful_Islam (1).pdf"
                                 >
                                     Download Resume
                                 </a>
