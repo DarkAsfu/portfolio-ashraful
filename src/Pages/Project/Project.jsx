@@ -15,7 +15,7 @@ const Project = () => {
     return (
         <div className="mb-20">
             <div className="fixed top-0 z-[-2] h-screen w-screen bg-white bg-[radial-gradient(100%_50%_at_50%_0%,rgba(0,163,255,0.13)_0,rgba(0,163,255,0)_50%,rgba(0,163,255,0)_100%)]"></div>
-            <div className="max-w-screen-xl mx-auto mt-10 grid md:grid-cols-2 align-middle">
+            <div className="max-w-screen-xl px-4 md:px-0 mx-auto mt-10 grid md:grid-cols-2 align-middle">
                 <img className="w-full md:order-2" src={project.projectImgs} alt={project.projectTitle} />
                 <div>
                     <h3 className="text-[18px] md:text-2xl font-bold mt-2 md:mt-0">{project.projectTitle}</h3>
@@ -40,7 +40,7 @@ const Project = () => {
                     </h2>
                 </div>
             </div>
-            <div className="max-w-screen-xl mx-auto">
+            <div className="max-w-screen-xl px-4 md:px-0 mx-auto">
                 <h3 className="text-[12px] md:text-[14px] mt-2 flex items-center">
                     <span className="font-bold text-[#0D9488]">Links: </span>
                     {project.githubClient && (
