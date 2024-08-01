@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
-import TitleAnimation from '../TitleAnimation/TitleAnimation';
 
 const NavBar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -18,7 +17,7 @@ const NavBar = () => {
                     <div className="flex-1 md:flex md:items-center md:gap-12">
                         <a className="block text-teal-600" href="/">
                             <span className="sr-only">Home</span>
-                            <h1 className='text-3xl md:text-4xl font-extrabold'><TitleAnimation text={"ASHRAFUL"}/></h1>
+                            <h1 className='text-3xl md:text-4xl font-extrabold'>ASHRAFUL</h1>
                         </a>
                     </div>
 

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
-import TitleAnimation from "../Shared/TitleAnimation/TitleAnimation";
+
 const Blogs = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [blogs, setBlogs] = useState([]);
@@ -22,7 +22,7 @@ const Blogs = () => {
     };
     return (
         <>
-            <h1 className="text-4xl px-4 font-extrabold text-center mb-10"><TitleAnimation text={'My Recent Blogs'}/></h1>
+            <h1 className="text-4xl px-4 font-extrabold text-center mb-10">My Recent Blogs</h1>
             <div className="max-w-screen-xl px-4 md:px-4 lg:px-4 xl:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 xl:gap-6 mb-10">
 
                 {

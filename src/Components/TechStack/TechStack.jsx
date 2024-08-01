@@ -1,5 +1,3 @@
-import TitleAnimation from "../Shared/TitleAnimation/TitleAnimation";
-
 const TechStack = () => {
     const skills = [
         {
@@ -65,7 +63,7 @@ const TechStack = () => {
     ]
     return (
         <div className="mb-20 mt-20 px-4">
-            <h1 className="text-4xl font-extrabold text-center"><TitleAnimation text={'My Techonology Stack'}/></h1>
+            <h1 className="text-4xl font-extrabold text-center">My Techonology Stack</h1>
             <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
                 {
                     skills.map((skill, idx) => <div className="bg-[#0d948915] h-full px-8 py-6 text-center rounded-md hover:bg-[#0d948945] border-2 border-[#0d948945] hover:border-[#0D9488] transition-all" key={idx}>

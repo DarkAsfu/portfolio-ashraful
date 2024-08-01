@@ -1,7 +1,6 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import ProjectCard from "../Shared/ProjectCard/ProjectCard";
-import TitleAnimation from "../Shared/TitleAnimation/TitleAnimation";
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -27,7 +26,7 @@ const Projects = () => {
 
   return (
     <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10">
-      <h1 className="text-4xl font-extrabold text-center mb-6"><TitleAnimation text={'My Projects'}/></h1>
+      <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
       <Tabs aria-label="Project Categories" className="mx-auto mb-4">
         <Tab key="All" title="All">
           <ProjectCard projects={filterProjects("All")} />
