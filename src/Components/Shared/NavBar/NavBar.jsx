@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
+import TitleAnimation from '../TitleAnimation/TitleAnimation';
 
 const NavBar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -16,7 +18,7 @@ const NavBar = () => {
                     <div className="flex-1 md:flex md:items-center md:gap-12">
                         <a className="block text-teal-600" href="/">
                             <span className="sr-only">Home</span>
-                            <h1 className='text-3xl md:text-4xl font-extrabold'>ASHRAFUL</h1>
+                            <h1 className='text-3xl md:text-4xl font-extrabold'><TitleAnimation text={"ASHRAFUL"}/></h1>
                         </a>
                     </div>
 
@@ -46,8 +48,8 @@ const NavBar = () => {
                         </nav>
                         <div className="flex items-center gap-4 text-[22px] text-[#0D9488]">
                             <div className="flex gap-4">
-                                <BsGithub />
-                                <FaLinkedinIn />
+                                <Link to="https://github.com/DarkAsfu"><BsGithub /></Link>
+                                <Link to="https://bd.linkedin.com/in/ashrafulislamm"><FaLinkedinIn /></Link>
                             </div>
 
                             <div className="block md:hidden">

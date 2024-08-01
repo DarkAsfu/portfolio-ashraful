@@ -1,4 +1,6 @@
 import { FaFacebookF, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6";
+import { Link } from "react-router-dom";
+import TitleAnimation from "../Shared/TitleAnimation/TitleAnimation";
 
 const About = () => {
     return (
@@ -16,7 +18,7 @@ const About = () => {
                         </div>
 
                         <div className="pb-3 lg:py-24">
-                            <h2 className="text-3xl font-bold sm:text-4xl">Who Am I</h2>
+                            <h2 className="text-3xl font-bold sm:text-4xl"><TitleAnimation text={'Who Am I'}/></h2>
 
                             <p className="mt-4 text-gray-600 pb-10 text-[14px] md:text-[16px]">
                                 I am Md. Ashraful Islam, a dedicated MERN Stack Developer based in Dhaka, Bangladesh. With a strong foundation in front-end technologies such as HTML5, CSS3, JavaScript (ES6+), ReactJS, and various UI libraries including TailwindCSS and MaterialUI, I excel in creating visually appealing and highly functional web applications. My backend expertise spans NodeJs, ExpressJs, and MongoDB, enabling me to develop robust full-stack solutions.
@@ -28,10 +30,16 @@ const About = () => {
                                 Explore my projects and connect with me on LinkedIn or GitHub to learn more about my work and professional journey.
                             </p>
                             <div className="flex gap-3 mb-4 text-[24px] text-[#0D9488] ">
-                            <FaGithub className="hover:text-black transition-all"/>
-                            <FaLinkedinIn className="hover:text-black transition-all" />
-                            <FaFacebookF className="hover:text-black transition-all" />
-                            <FaXTwitter className="hover:text-black transition-all" />
+                                <Link to="https://github.com/DarkAsfu">
+                                    <FaGithub className="hover:text-black transition-all" />
+                                </Link>
+                                <Link to="https://bd.linkedin.com/in/ashrafulislamm">
+                                    <FaLinkedinIn className="hover:text-black transition-all" />
+                                </Link>
+                                <Link to="https://web.facebook.com/heyashrafulislam">
+                                    <FaFacebookF className="hover:text-black transition-all" />
+                                </Link>
+                                <Link to=""><FaXTwitter className="hover:text-black transition-all" /></Link>
                             </div>
                             {/* <a
                                 href="#"

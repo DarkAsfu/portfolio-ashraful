@@ -16,10 +16,8 @@ const Footer = () => {
                             <div>
                                 <h2 className="text-2xl font-medium text-gray-900">Request a Demo</h2>
 
-                                <p className="mt-4 max-w-lg text-gray-500">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis, harum deserunt
-                                    nesciunt praesentium, repellendus eum perspiciatis ratione pariatur a aperiam eius
-                                    numquam doloribus asperiores sunt.
+                                <p className="mt-4 max-w-lg text-gray-500 text-[12px] md:text-[14px]">
+                                Curious about my work? Request a demo to get a firsthand look at my web development projects. See live demonstrations of my latest applications, and discover how my skills can help bring your ideas to life.
                                 </p>
                             </div>
 
@@ -27,13 +25,15 @@ const Footer = () => {
                                 <label htmlFor="UserEmail" className="sr-only"> Email </label>
 
                                 <div
-                                    className="rounded-md border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4"
+                                    className="rounded-md border border-gray-100 p-2 focus-within:ring sm:flex sm:items-center sm:gap-4
+                                    "
                                 >
                                     <input
                                         type="email"
                                         id="UserEmail"
                                         placeholder="john@rhcp.com"
-                                        className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm"
+                                        className="w-full border-none focus:border-transparent focus:ring-transparent sm:text-sm
+                                        bg-[#f9f9f9b9]"
                                     />
 
                                     <button
@@ -51,47 +51,29 @@ const Footer = () => {
                             <h1 className="text-4xl font-extrabold">{`<Ashraful/>`}</h1>
                         </div>
 
-                        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
                             <div>
                                 <p className="font-medium text-gray-900">Services</p>
 
-                                <ul className="mt-6 space-y-4 text-sm">
+                                <ul className="mt-6 space-y-4 text-[12px] md:text-sm ">
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> 1on1 Coaching </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Figma to React </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Company Review </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Leanding Page Design </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Api Intregation </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> HR Consulting </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> MERN Stack Web Application Development </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> SEO Optimisation </a>
-                                    </li>
-                                </ul>
-                            </div>
-
-                            <div>
-                                <p className="font-medium text-gray-900">Company</p>
-
-                                <ul className="mt-6 space-y-4 text-sm">
-                                    <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> About </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Meet the Team </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Accounts Review </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Frontend Web Application </a>
                                     </li>
                                 </ul>
                             </div>
@@ -99,7 +81,7 @@ const Footer = () => {
                             <div>
                                 <p className="font-medium text-gray-900">Helpful Links</p>
 
-                                <ul className="mt-6 space-y-4 text-sm">
+                                <ul className="mt-6 space-y-4 text-[12px] md:text-sm">
                                     <li>
                                         <a href="#" className="text-gray-700 transition hover:opacity-75"> Contact </a>
                                     </li>
@@ -130,7 +112,7 @@ const Footer = () => {
                                 </li>
                             </ul>
 
-                            <p className="mt-8 text-xs text-gray-500">&copy; 2022. Company Name. All rights reserved.</p>
+                            <p className="mt-8 text-xs text-gray-500">&copy; 2024. Ashraful Islam. All rights reserved.</p>
                         </div>
                     </div>
                 </div>

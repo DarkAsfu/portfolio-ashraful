@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { LuExternalLink } from "react-icons/lu";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import TitleAnimation from "../Shared/TitleAnimation/TitleAnimation";
 const Blogs = () => {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
     const [blogs, setBlogs] = useState([]);
@@ -21,10 +22,11 @@ const Blogs = () => {
     };
     return (
         <>
-            <h1 className="text-4xl px-4 font-extrabold text-center mb-10">My Recent Blogs</h1>
-            <div className="max-w-screen-xl px-4 md:px-0 mx-auto grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-10 mb-10">
+            <h1 className="text-4xl px-4 font-extrabold text-center mb-10"><TitleAnimation text={'My Recent Blogs'}/></h1>
+            <div className="max-w-screen-xl px-4 md:px-4 lg:px-4 xl:px-0 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-4 xl:gap-6 mb-10">
 
                 {
+                    blogs.length>0 ? 
                     blogs.slice(0, 8).map(blog => <div key={blog._id} className="rounded-lg border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
                         <div className="img rounded-full flex justify-between">
                             <img className='rounded-full w-8' src={blog.publisher_img ? blog.publisher_img : "https://i.ibb.co/2qr381T/user-1.png"} alt="" />
@@ -76,6 +78,7 @@ const Blogs = () => {
 
                         </div>
                     </div>)
+                    : <img src="https://i.ibb.co/qJzzZWj/j-KEc-VPZFk-2.gif" alt="loading" />
                 }
             </div>
         </>

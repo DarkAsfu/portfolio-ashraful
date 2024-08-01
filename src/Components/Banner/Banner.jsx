@@ -11,7 +11,7 @@ const Banner = () => {
                                 <strong className="font-extrabold text-[#0D9488] sm:block"> Front-end Developer? </strong>
                             </h1>
 
-                            <p className="mt-4 sm:text-xl/relaxed">
+                            <p className="mt-4 text-[14px]/relaxed md:text-xl/relaxed">
                             Creating stunning, functional websites with React. Explore my projects and see my passion for seamless user experiences.
                             </p>
 
