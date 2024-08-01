@@ -5,12 +5,7 @@ import { Link, useLoaderData } from 'react-router-dom';
 // import Loading from '../../Components/Loading/Loading';
 
 const Project = () => {
-    // const [loading, setLoading] = useState(true);
     const project = useLoaderData();
-
-    // if (loading) {
-    //     return <Loading setLoading={setLoading} />;
-    // }
 
     return (
         <div className="mb-20">

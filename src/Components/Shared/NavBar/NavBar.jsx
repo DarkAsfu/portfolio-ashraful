@@ -1,18 +1,39 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { BsGithub } from 'react-icons/bs';
 import { FaLinkedinIn } from 'react-icons/fa6';
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
+    const [isScrolled, setScrolled] = useState(false);
 
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!isMobileMenuOpen);
     };
 
+    useEffect(() => {
+        const handleScroll = () => {
+            // Check if the page is scrolled more than 50 pixels
+            if (window.scrollY > 50) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
-        <header className="">
-            <div className="md:mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 md:border md:rounded-md md:mt-4 bg-[#ffffff34]">
+        <header
+            className={`sticky top-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-[#ffffff34]'} relative`}
+        >
+            <div className="md:mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 md:border md:rounded-md md:mt-4">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
                         <a className="block text-teal-600" href="/">
@@ -27,19 +48,12 @@ const NavBar = () => {
                                 <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
                                 </li>
-
-                                {/* <li>
-                                    <a className="text-gray-500 transition hover:text-gray-500/75" href="/#test"> Services </a>
-                                </li> */}
-
                                 <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/#projects"> Portfolio </a>
                                 </li>
-
                                 <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
                                 </li>
-
                                 <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Contact </a>
                                 </li>
@@ -73,17 +87,14 @@ const NavBar = () => {
                 </div>
             </div>
             {isMobileMenuOpen && (
-                <div className="md:hidden">
+                <div className="absolute top-full left-0 w-full bg-white z-60">
                     <nav aria-label="Global" className="bg-white">
                         <ul className="flex flex-col items-start gap-4 p-4 text-sm">
                             <li>
                                 <a className="text-gray-500 transition hover:text-gray-500/75" href="/"> Home </a>
                             </li>
                             <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-                            </li>
-                            <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Portfolio </a>
+                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#projects"> Portfolio </a>
                             </li>
                             <li>
                                 <a className="text-gray-500 transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
