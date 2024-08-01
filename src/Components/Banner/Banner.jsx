@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Banner = () => {
     return (
         <>
@@ -16,19 +18,19 @@ const Banner = () => {
                             </p>
 
                             <div className="mt-8 flex flex-wrap justify-center gap-4">
-                                <a
+                                <a  download
                                     className="block w-full rounded bg-[#0D9488] px-12 py-3 text-sm font-medium text-white shadow hover:bg-[#0D9488] focus:outline-none focus:ring active:bg-[#33a89e] sm:w-auto"
-                                    href="#"
+                                    href="../../../public/MERN_Stack_Developer_Ashraful_Islam (1).pdf"
                                 >
-                                    Get Started
+                                    Download Resume
                                 </a>
 
-                                <a
+                                <Link
                                     className="block w-full rounded px-12 py-3 text-sm font-medium text-[#0D9488] shadow hover:text-[#0D9488] focus:outline-none focus:ring active:text-[#349e95] sm:w-auto"
-                                    href="#"
+                                    to="/resume"
                                 >
-                                    Learn More
-                                </a>
+                                    Preview Resume
+                                </Link>
                             </div>
                         </div>
                     </div>
