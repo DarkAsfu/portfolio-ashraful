@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Contact = () => {
     return (
         <div>
-            <div className="bg-white mx-auto max-w-screen-xl px-4 md:px-10 md:flex gap-20 py-10 border-4 my-10 border-[#000] rounded-3xl">
+            <div className="bg-white mx-4 md:mx-auto max-w-screen-xl px-4 md:px-10 md:flex gap-20 py-10 border-4 my-10 border-[#000] rounded-3xl">
                 <div className="mb-4 md:mb-0">
                     <div className="flex flex-col">
                         <div className="flex gap-2 mb-8">
@@ -41,17 +41,17 @@ const Contact = () => {
                                 <p>+880 1777112564</p>
                             </div>
                         </div>
-                        <div className="md:absolute bottom-10 text-[24px] flex gap-2">
+                        <div className="md:absolute bottom-10 text-[28px] flex gap-2 pt-4">
                             <Link to="https://github.com/DarkAsfu">
-                                <FaGithub className="text-black hover:text-[#0D9488] transition-all" />
+                                <FaGithub className="text-black hover:text-[#0D9488] transition-all border p-1 rounded-md" />
                             </Link>
                             <Link to="https://bd.linkedin.com/in/ashrafulislamm">
-                                <FaLinkedinIn className="text-black hover:text-[#0D9488] transition-all" />
+                                <FaLinkedinIn className="text-black hover:text-[#0D9488] transition-all border p-1 rounded-md" />
                             </Link>
                             <Link to="https://web.facebook.com/heyashrafulislam">
-                                <FaFacebookF className="text-black hover:text-[#0D9488] transition-all" />
+                                <FaFacebookF className="text-black hover:text-[#0D9488] transition-all border p-1 rounded-md" />
                             </Link>
-                            <Link to=""><FaXTwitter className="text-black hover:text-[#0D9488] transition-all" /></Link>
+                            <Link to=""><FaXTwitter className="text-black hover:text-[#0D9488] transition-all border p-1 rounded-md" /></Link>
                         </div>
                     </div>
                 </div>
