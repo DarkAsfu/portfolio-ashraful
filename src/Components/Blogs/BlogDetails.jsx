@@ -122,7 +122,7 @@ const BlogDetails = () => {
                 {showButton && (
                     <button
                         onClick={bottomToTop}
-                        className="fixed top-[90vh] right-2 md:right-72 text-[36px] transition-transform duration-300 text-[#D9042B]"
+                        className="fixed top-[90vh] right-2 md:right-72 text-[36px] transition-transform duration-300 text-[#0D9488]"
                     >
                         <FiArrowUpCircle />
                     </button>
