@@ -71,7 +71,9 @@ const Blogs = () => {
                             <div key={blog._id} className="border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
                                 <div className="img rounded-full flex justify-between">
                                     <img className='rounded-full w-8' src={blog.publisher_img ? blog.publisher_img : "https://i.ibb.co/2qr381T/user-1.png"} alt="" />
-                                    <Link to={blog._id} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black hidden group-hover:flex items-center transition-all" type="button">Read Post <LuExternalLink className="rotate-1 text-lg" /></Link>
+                                    <Link to={blog._id} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black md:hidden group-hover:flex 
+                                    flex
+                                    items-center transition-all rounded-full text-[12px] md:text-[14px] px-2" type="button">Read Post <LuExternalLink className="rotate-1 text-lg" /></Link>
                                 </div>
                                 <h3 className='text-[20px] leading-7 font-bold text-[#0E1217]'>{blog?.title}</h3>
                                 <p className='text-[#525866] text-[13px] leading-[18px] mb-1'>{blog.date}</p>
