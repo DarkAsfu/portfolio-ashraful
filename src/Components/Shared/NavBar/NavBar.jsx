@@ -55,7 +55,7 @@ const NavBar = () => {
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
                                 </li>
                                 <li>
-                                    <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Contact </a>
+                                    <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
                                 </li>
                             </ul>
                         </nav>
@@ -100,7 +100,7 @@ const NavBar = () => {
                                 <a className="text-gray-500 transition hover:text-gray-500/75" href="/blogs"> Blogs </a>
                             </li>
                             <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Contact </a>
+                                <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
                             </li>
                         </ul>
                     </nav>
