@@ -98,13 +98,13 @@ const Resume = () => {
                     </section>
 
                     <section className="mb-6">
-                        <h2 className="text-xl font-bold border-b pb-2 mb-4">EDUCATION</h2>
-                        <p>B.Sc in CSE, Green University of Bangladesh · <span className="italic">2022-present</span></p>
+                        <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">EDUCATION</h2>
+                        <p className="text-[14px] md:text-[16px]">B.Sc in CSE, Green University of Bangladesh · <span className="italic">2022-present</span></p>
                     </section>
 
                     <section>
-                        <h2 className="text-xl font-bold border-b pb-2 mb-4">LANGUAGE</h2>
-                        <p>Bangla, English, Hindi</p>
+                        <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">LANGUAGE</h2>
+                        <p className="text-[14px] md:text-[16px]">Bangla, English, Hindi</p>
                     </section>
                 </div>
             </div>
