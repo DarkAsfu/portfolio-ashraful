@@ -8,7 +8,7 @@ const About = () => {
             <section className="mb-10">
                 <div className="mx-4 md:mx-auto max-w-screen-xl  bg-[#fff] border rounded-md">
                     <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 align-middle items-center px-4 pb-10 md:pb-0 border-[#0D9488] border-3 rounded-md">
-                        <div data-aos="fade-right" className="overflow-hidden rounded-lg sm:h-80 lg:order-last h-64 md:h-96">
+                        <div data-aos="zoom-in-left" className="overflow-hidden rounded-lg sm:h-80 lg:order-last h-64 md:h-96">
                             <img
                                 alt=""
                                 src="https://i.ibb.co/K6hmjYd/Programmer-Thomas.gif"
@@ -16,7 +16,7 @@ const About = () => {
                             />
                         </div>
 
-                        <div data-aos="fade-left" className="pb-3 lg:py-24">
+                        <div data-aos="zoom-in-right" className="pb-3 lg:py-24">
                             <h2 className="text-3xl font-bold sm:text-4xl">Who Am I</h2>
 
                             <p className="mt-4 text-gray-600 pb-10 text-[14px] md:text-[16px]">
