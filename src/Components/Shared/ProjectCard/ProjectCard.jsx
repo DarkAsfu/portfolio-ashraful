@@ -10,7 +10,7 @@ const ProjectCard = (params) => {
             <CardBody className="bg-[#0d948915]">
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 py-10 px-2">
                     {
-                        projects.length > 0 ? projects.map(project => <Card isHoverable={true} key={project._id} className="py-4">
+                        projects.length > 0 ? projects.map(project => <Card data-aos="zoom-in-up" isHoverable={true} key={project._id} className="py-4">
                             <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
                                 <p className="text-tiny uppercase font-bold">{project.projectTitle}</p>
                                 <small className="text-default-500">{project.projectDescription.slice(0, 100)}.. <Link href={`project/${project.projectTitle}`} className="text-[14px]">See Details</Link></small>

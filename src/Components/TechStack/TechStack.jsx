@@ -62,7 +62,7 @@ const TechStack = () => {
         }
     ]
     return (
-        <div className="mb-20 mt-20 px-4">
+        <div className="mb-20 mt-20 px-4" data-aos="fade-up">
             <h1 className="text-4xl font-extrabold text-center">My Techonology Stack</h1>
             <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
                 {

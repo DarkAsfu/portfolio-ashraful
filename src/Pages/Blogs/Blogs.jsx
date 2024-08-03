@@ -68,7 +68,7 @@ const Blogs = () => {
                         </div>
                     ) : filteredBlogs.length > 0 ? (
                         filteredBlogs.map(blog => (
-                            <div key={blog._id} className="border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
+                            <div data-aos="zoom-in-up" key={blog._id} className="border p-2 card shadow-md overflow-auto flex flex-col bg-[#F8F9FA] relative group transition-all">
                                 <div className="img rounded-full flex justify-between">
                                     <img className='rounded-full w-8' src={blog.publisher_img ? blog.publisher_img : "https://i.ibb.co/2qr381T/user-1.png"} alt="" />
                                     <Link to={blog._id} className="btn bg-black text-white  btn-sm capitalize hover:drop-shadow-lg hover:shadow-black hover:bg-black md:hidden group-hover:flex 

@@ -25,7 +25,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10">
+    <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10" data-aos="fade-up">
       <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
       <Tabs aria-label="Project Categories" className="mx-auto mb-4">
         <Tab key="All" title="All">
