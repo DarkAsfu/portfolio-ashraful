@@ -14,7 +14,7 @@ const Footer = () => {
                             <span className="hidden h-1 w-10 rounded bg-teal-500 lg:block"></span>
 
                             <div>
-                                <h2 className="text-2xl font-medium text-gray-900">Request a Demo</h2>
+                                <h2 className="text-[18px] font-medium text-gray-900">See My Work in Action: Request a Demo Today</h2>
 
                                 <p className="mt-4 max-w-lg text-gray-500 text-[12px] md:text-[14px]">
                                 Curious about my work? Request a demo to get a firsthand look at my web development projects. See live demonstrations of my latest applications, and discover how my skills can help bring your ideas to life.
@@ -83,22 +83,22 @@ const Footer = () => {
 
                                 <ul className="mt-6 space-y-4 text-[12px] md:text-sm">
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Contact </a>
+                                        <a href="/contact" className="text-gray-700 transition hover:opacity-75"> Contact </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> FAQs </a>
+                                        <a href="/" className="text-gray-700 transition hover:opacity-75"> FAQs </a>
                                     </li>
 
                                     <li>
-                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Live Chat </a>
+                                        <a href="#" className="text-gray-700 transition hover:opacity-75"> Live Chat (Upcoming) </a>
                                     </li>
                                 </ul>
                             </div>
                         </div>
 
                         <div className="mt-8 border-t border-gray-100 pt-8">
-                            <ul className="flex flex-wrap gap-4 text-xs">
+                            {/* <ul className="flex flex-wrap gap-4 text-xs">
                                 <li>
                                     <a href="#" className="text-gray-500 transition hover:opacity-75"> Terms & Conditions </a>
                                 </li>
@@ -110,7 +110,7 @@ const Footer = () => {
                                 <li>
                                     <a href="#" className="text-gray-500 transition hover:opacity-75"> Cookies </a>
                                 </li>
-                            </ul>
+                            </ul> */}
 
                             <p className="mt-8 text-xs text-gray-500">&copy; 2024. Ashraful Islam. All rights reserved.</p>
                         </div>

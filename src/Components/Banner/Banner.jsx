@@ -8,9 +8,9 @@ const Banner = () => {
                 <section className="">
                     <div className="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center">
                         <div className="mx-auto max-w-xl text-center">
-                            <h1 className="text-3xl font-extrabold sm:text-5xl">
+                            <h1 className="text-3xl font-extrabold sm:text-[46px] leading-tight">
                                 Are you looking for a
-                                <strong className="font-extrabold text-[#0D9488] sm:block"> Front-end Developer? </strong>
+                                <strong className="font-extrabold text-[#0D9488] sm:block"> Mern Stack Developer? </strong>
                             </h1>
 
                             <p className="mt-4 text-[14px]/relaxed md:text-xl/relaxed">

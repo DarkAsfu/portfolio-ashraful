@@ -4,9 +4,11 @@ import { FaFacebookF, FaGithub, FaLinkedinIn, FaXTwitter } from "react-icons/fa6
 import { IoLocationOutline } from "react-icons/io5";
 import { LuPhoneCall } from "react-icons/lu";
 import { Link } from "react-router-dom";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 const Contact = () => {
     return (
         <div>
+            <ScrollToTop/>
             <div className="bg-white mx-4 md:mx-auto max-w-screen-xl px-4 md:px-10 md:flex gap-20 py-10 border-4 my-10 border-[#000] rounded-3xl">
                 <div className="mb-4 md:mb-0">
                     <div className="flex flex-col">
@@ -15,8 +17,8 @@ const Contact = () => {
                                 <BiChat className="border p-1 text-[30px] rounded-md" />
                             </div>
                             <div className="text-[14px]">
-                                <h3 className="font-bold text-[18px]">Chat to us</h3>
-                                <p>Our friendly team is here to help</p>
+                                <h3 className="font-bold text-[18px]">Chat with me</h3>
+                                <p>I'm here to help your project</p>
                                 <p>ashraful.islam0871@gmail.com</p>
                             </div>
                         </div>
@@ -26,7 +28,6 @@ const Contact = () => {
                             </div>
                             <div className="text-[14px]">
                                 <h3 className="font-bold text-[18px]">Visit Us</h3>
-                                <p>Come say hello at our office</p>
                                 <p>Nikunjo-2, Dhaka</p>
                                 <p>Bangladesh</p>
                             </div>
@@ -37,7 +38,7 @@ const Contact = () => {
                             </div>
                             <div className="text-[14px]">
                                 <h3 className="font-bold text-[18px]">Call Us</h3>
-                                <p>Mon-Fri from 8am to 5pm.</p>
+                                <p>Always available</p>
                                 <p>+880 1777112564</p>
                             </div>
                         </div>
@@ -56,8 +57,8 @@ const Contact = () => {
                     </div>
                 </div>
                 <div className="border-1 px-6 md:px-16 py-10 bg-[#0d948926] rounded-3xl">
-                    <h1 className="text-[24px] md:text-[42px] font-bold"> Got ideas? We've got the skills. Let's team up.</h1>
-                    <p className="md:font-semibold">Tell is more about yourself and what you're got in mind.</p>
+                    <h1 className="text-[24px] md:text-[36px] font-bold"> Have an idea? As a web developer, I can help bring it to life!</h1>
+                    <p className="md:font-semibold">Let's collaborate to create something extraordinary together.</p>
 
                     <form>
                         <Input className="mt-3" type="text" variant="underlined" label="Your name" />
