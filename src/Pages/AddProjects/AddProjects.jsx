@@ -28,6 +28,8 @@ const AddProjects = () => {
         { key: "mern", label: "MERN" },
         { key: "react", label: "ReactJs" },
         { key: "backend", label: "Backend" },
+        { key: "dom", label: "Js Dom" },
+        { key: "htmlcss", label: "Html/Css" },
     ]
     const [imagePreviews, setImagePreviews] = useState([]);
 
@@ -118,7 +120,7 @@ const AddProjects = () => {
             console.log('Form Data:', projectData);
 
             // Send projectData to the server
-            await fetch('https://ashrafulislambackend.vercel.app/projects', {
+            await fetch('https://portfolio-backend-0y27.onrender.com/projects', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

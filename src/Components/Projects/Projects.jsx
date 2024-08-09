@@ -31,11 +31,17 @@ const Projects = () => {
         <Tab key="All" title="All">
           <ProjectCard projects={filterProjects("All")} />
         </Tab>
+        <Tab key="MERN Stack" title="MERN">
+          <ProjectCard projects={filterProjects("mern")} />
+        </Tab>
         <Tab key="React" title="React">
           <ProjectCard projects={filterProjects("react")} />
         </Tab>
-        <Tab key="MERN Stack" title="MERN">
-          <ProjectCard projects={filterProjects("mern")} />
+        <Tab key="Js Dom" title="Js Dom">
+          <ProjectCard projects={filterProjects("dom")} />
+        </Tab>
+        <Tab key="htmlcss" title="Html & Css">
+          <ProjectCard projects={filterProjects("htmlcss")} />
         </Tab>
         <Tab key="Backend" title="Backend">
           <ProjectCard projects={filterProjects("backend")} />
