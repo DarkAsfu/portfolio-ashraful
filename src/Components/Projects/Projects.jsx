@@ -40,12 +40,12 @@ const Projects = () => {
         <Tab key="Js Dom" title="Js Dom">
           <ProjectCard projects={filterProjects("dom")} />
         </Tab>
-        <Tab key="htmlcss" title="Html & Css">
+        {/* <Tab key="htmlcss" title="HtmlCss">
           <ProjectCard projects={filterProjects("htmlcss")} />
-        </Tab>
-        <Tab key="Backend" title="Backend">
+        </Tab> */}
+        {/* <Tab key="Backend" title="Backend">
           <ProjectCard projects={filterProjects("backend")} />
-        </Tab>
+        </Tab> */}
       </Tabs>
     </div>
   );
