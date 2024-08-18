@@ -27,7 +27,7 @@ const Projects = () => {
   return (
     <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10" data-aos="fade-up">
       <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
-      <Tabs aria-label="Project Categories" className="mx-auto mb-4">
+      <Tabs aria-label="Project Categories" className="mb-4 px-4 md:mx-auto">
         <Tab key="All" title="All">
           <ProjectCard projects={filterProjects("All")} />
         </Tab>
@@ -39,6 +39,9 @@ const Projects = () => {
         </Tab>
         <Tab key="Js Dom" title="Js Dom">
           <ProjectCard projects={filterProjects("dom")} />
+        </Tab>
+        <Tab key="Next js" title="NextJs">
+          <ProjectCard projects={filterProjects("nextjs")} />
         </Tab>
         {/* <Tab key="htmlcss" title="HtmlCss">
           <ProjectCard projects={filterProjects("htmlcss")} />

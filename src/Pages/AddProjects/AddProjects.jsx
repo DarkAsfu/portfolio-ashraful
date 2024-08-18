@@ -30,6 +30,7 @@ const AddProjects = () => {
         { key: "backend", label: "Backend" },
         { key: "dom", label: "Js Dom" },
         { key: "htmlcss", label: "Html/Css" },
+        { key: "nextjs", label: "NextJs" },
     ]
     const [imagePreviews, setImagePreviews] = useState([]);
 
