@@ -119,7 +119,7 @@ const Footer = () => {
         //     </div>
         // </footer>
         <footer className="bg-[#f9f9f9b9]">
-            <div className="mx-auto max-w-screen-xl px-4 py-8">
+            <div className="mx-auto max-w-screen-xl px-4 p-8">
                 <div className="sm:flex sm:items-center sm:justify-between">
                     <div className="flex justify-center text-teal-600 sm:justify-start">
                     <h1 className="text-2xl font-extrabold">{`<Ashraful/>`}</h1>
