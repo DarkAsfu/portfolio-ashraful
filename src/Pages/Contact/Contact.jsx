@@ -9,7 +9,7 @@ const Contact = () => {
     return (
         <div>
             <ScrollToTop/>
-            <div className="bg-white mx-4 md:mx-auto max-w-screen-xl px-4 md:px-10 md:flex gap-20 py-10 border-4 my-10 border-[#000] rounded-3xl">
+            <div className="bg-white mx-4 md:mx-auto max-w-screen-xl px-4 md:px-10 md:flex gap-20 py-10 border-4 my-20 border-[#000] rounded-3xl">
                 <div className="mb-4 md:mb-0">
                     <div className="flex flex-col">
                         <div className="flex gap-2 mb-8">
