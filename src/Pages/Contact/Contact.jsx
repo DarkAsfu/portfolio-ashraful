@@ -42,7 +42,7 @@ const Contact = () => {
                                 <p>+880 1777112564</p>
                             </div>
                         </div>
-                        <div className="md:absolute bottom-10 text-[28px] flex gap-2 pt-4">
+                        <div className="md:relative -bottom-44 text-[28px] flex gap-2 pt-4">
                             <Link to="https://github.com/DarkAsfu">
                                 <FaGithub className="text-black hover:text-[#0D9488] transition-all border p-1 rounded-md" />
                             </Link>

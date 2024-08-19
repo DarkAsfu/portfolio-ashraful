@@ -3,6 +3,7 @@ import Banner from "../../Components/Banner/Banner";
 import Blogs from "../../Components/Blogs/Blogs";
 import Projects from "../../Components/Projects/Projects";
 import TechStack from "../../Components/TechStack/TechStack";
+import Contact from "../Contact/Contact";
 
 const Home = () => {
     return (
@@ -12,6 +13,7 @@ const Home = () => {
             <TechStack/>
             <Projects/>
             <Blogs/>
+            <Contact/>
         </div>
     );
 };
