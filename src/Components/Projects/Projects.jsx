@@ -1,9 +1,11 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import ProjectCard from "../Shared/ProjectCard/ProjectCard";
+import data from "../../Hooks/data"; // Assuming this is your placeholder data
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
+  const [loading, setLoading] = useState(true); // Loading state
 
   useEffect(() => {
     const fetchProjects = async () => {
@@ -13,6 +15,8 @@ const Projects = () => {
         setProjects(data);
       } catch (error) {
         console.error("Error fetching projects:", error);
+      } finally {
+        setLoading(false); // Set loading to false after data is fetched
       }
     };
 
@@ -29,26 +33,21 @@ const Projects = () => {
       <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
       <Tabs aria-label="Project Categories" className="mb-4 px-4 md:mx-auto">
         <Tab key="All" title="All">
-          <ProjectCard projects={filterProjects("All")} />
+          <ProjectCard projects={loading ? data : filterProjects("All")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="MERN Stack" title="MERN">
-          <ProjectCard projects={filterProjects("mern")} />
+          <ProjectCard projects={loading ? data : filterProjects("mern")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="React" title="React">
-          <ProjectCard projects={filterProjects("react")} />
+          <ProjectCard projects={loading ? data : filterProjects("react")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="Js Dom" title="Js Dom">
-          <ProjectCard projects={filterProjects("dom")} />
+          <ProjectCard projects={loading ? data : filterProjects("dom")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="Next js" title="NextJs">
-          <ProjectCard projects={filterProjects("nextjs")} />
+          <ProjectCard projects={loading ? data : filterProjects("nextjs")} /> {/* Use default data if loading */}
         </Tab>
-        {/* <Tab key="htmlcss" title="HtmlCss">
-          <ProjectCard projects={filterProjects("htmlcss")} />
-        </Tab> */}
-        {/* <Tab key="Backend" title="Backend">
-          <ProjectCard projects={filterProjects("backend")} />
-        </Tab> */}
+        {/* Uncomment or add additional tabs as needed */}
       </Tabs>
     </div>
   );
