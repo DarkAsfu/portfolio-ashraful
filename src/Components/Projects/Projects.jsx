@@ -24,8 +24,8 @@ const Projects = () => {
   }, []);
 
   const filterProjects = (category) => {
-    if (category === 'All') return projects;
-    return projects.filter((project) => project.categories === category);
+    if (category === 'All') return projects ? projects : data;
+    return projects ? projects.filter((project) => project.categories === category) : data.filter((project) => project.categories === category);
   };
 
   return (
@@ -33,19 +33,19 @@ const Projects = () => {
       <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
       <Tabs aria-label="Project Categories" className="mb-4 px-4 md:mx-auto">
         <Tab key="All" title="All">
-          <ProjectCard projects={loading ? data : filterProjects("All")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("All")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="MERN Stack" title="MERN">
-          <ProjectCard projects={loading ? data : filterProjects("mern")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("mern")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="React" title="React">
-          <ProjectCard projects={loading ? data : filterProjects("react")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("react")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="Js Dom" title="Js Dom">
-          <ProjectCard projects={loading ? data : filterProjects("dom")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("dom")} /> {/* Use default data if loading */}
         </Tab>
         <Tab key="Next js" title="NextJs">
-          <ProjectCard projects={loading ? data : filterProjects("nextjs")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("nextjs")} /> {/* Use default data if loading */}
         </Tab>
         {/* Uncomment or add additional tabs as needed */}
       </Tabs>

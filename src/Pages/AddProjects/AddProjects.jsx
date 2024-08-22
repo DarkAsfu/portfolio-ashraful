@@ -4,8 +4,15 @@ import { Textarea, Button, Chip } from "@nextui-org/react";
 import Swal from 'sweetalert2';
 import { Select, SelectItem } from "@nextui-org/react";
 const img_hosting_token = import.meta.env.VITE_ImageUpload_Token;
-
+// import "@uploadcare/react-uploader/core.css";
+// import { FileUploaderRegular } from '@uploadcare/react-uploader';
 const AddProjects = () => {
+    // const [files, setFiles] = useState([]);
+
+    // const handleChangeEvent = (items) => {
+    //     setFiles([...items.allEntries.filter((file) => file.status === 'success')]);
+    // };
+    // console.log(files);
     const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         projectTitle: '',
@@ -305,7 +312,7 @@ const AddProjects = () => {
                     />
                 </div>
                 <Input
-                    
+
                     type="text"
                     label="Role"
                     name="role"
@@ -325,6 +332,20 @@ const AddProjects = () => {
                     }
                 </div>
             </form>
+            <div>
+                {/* <FileUploaderRegular onChange={handleChangeEvent} pubkey="7a9832ebf74fe1403974" />
+
+                <div>
+                    {files.map((file) => (
+                        <div key={file.uuid}>
+                            <img
+                                src={file.cdnUrl}
+                                alt={file.fileInfo.originalFilename}
+                            />
+                        </div>
+                    ))}
+                </div> */}
+            </div>
         </div>
     );
 };
