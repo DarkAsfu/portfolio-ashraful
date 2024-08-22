@@ -1,22 +1,28 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import ProjectCard from "../Shared/ProjectCard/ProjectCard";
-import data from "../../Hooks/data"; // Assuming this is your placeholder data
+import placeholderData from "../../Hooks/data"; // Your placeholder data
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  const [loading, setLoading] = useState(true); // Loading state
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null); // State for error handling
 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
         const response = await fetch('https://portfolio-backend-0y27.onrender.com/projects');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
         const data = await response.json();
-        setProjects(data);
+        setProjects(data.length ? data : placeholderData); // Use API data if available, otherwise fallback to local data
       } catch (error) {
         console.error("Error fetching projects:", error);
+        setProjects(placeholderData); // Fallback to local data on error
+        setError("");
       } finally {
-        setLoading(false); // Set loading to false after data is fetched
+        setLoading(false);
       }
     };
 
@@ -24,28 +30,33 @@ const Projects = () => {
   }, []);
 
   const filterProjects = (category) => {
-    if (category === 'All') return projects ? projects : data;
-    return projects ? projects.filter((project) => project.categories === category) : data.filter((project) => project.categories === category);
+    if (category === 'All') return projects;
+    return projects.filter((project) => project.categories === category);
   };
+
+  if (loading) {
+    return <div>Loading...</div>; // You can replace this with a more stylish loading spinner
+  }
 
   return (
     <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10" data-aos="fade-up">
       <h1 className="text-4xl font-extrabold text-center mb-6">My Projects</h1>
+      {error && <div>{error}</div>} {/* Display error message if API fails */}
       <Tabs aria-label="Project Categories" className="mb-4 px-4 md:mx-auto">
         <Tab key="All" title="All">
-          <ProjectCard projects={filterProjects("All")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("All")} />
         </Tab>
-        <Tab key="MERN Stack" title="MERN">
-          <ProjectCard projects={filterProjects("mern")} /> {/* Use default data if loading */}
+        <Tab key="MERN" title="MERN">
+          <ProjectCard projects={filterProjects("mern")} />
         </Tab>
         <Tab key="React" title="React">
-          <ProjectCard projects={filterProjects("react")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("react")} />
         </Tab>
         <Tab key="Js Dom" title="Js Dom">
-          <ProjectCard projects={filterProjects("dom")} /> {/* Use default data if loading */}
+          <ProjectCard projects={filterProjects("dom")} />
         </Tab>
-        <Tab key="Next js" title="NextJs">
-          <ProjectCard projects={filterProjects("nextjs")} /> {/* Use default data if loading */}
+        <Tab key="NextJs" title="NextJs">
+          <ProjectCard projects={filterProjects("nextjs")} />
         </Tab>
         {/* Uncomment or add additional tabs as needed */}
       </Tabs>
