@@ -35,9 +35,6 @@ const Projects = () => {
     return projects.filter((project) => project.categories === category);
   };
 
-  if (loading) {
-    return <div>Loading...</div>; // You can replace this with a more stylish loading spinner
-  }
 
   return (
     <div className="flex w-full flex-col max-w-screen-xl mx-auto py-10" data-aos="fade-up">
