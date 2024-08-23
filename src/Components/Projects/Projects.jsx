@@ -7,7 +7,7 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null); // State for error handling
-
+  console.log(placeholderData);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -16,7 +16,8 @@ const Projects = () => {
           throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        setProjects(data.length ? data : placeholderData); // Use API data if available, otherwise fallback to local data
+        console.log(data);
+        setProjects(data.length > 0 ? data : placeholderData); // Use API data if available, otherwise fallback to local data
       } catch (error) {
         console.error("Error fetching projects:", error);
         setProjects(placeholderData); // Fallback to local data on error
