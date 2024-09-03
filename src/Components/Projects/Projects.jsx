@@ -1,20 +1,16 @@
 import { Tabs, Tab } from "@nextui-org/react";
 import { useEffect, useState } from "react";
 import ProjectCard from "../Shared/ProjectCard/ProjectCard";
-import placeholderData from "../../Hooks/data"; // Your placeholder data
+// import placeholderData from "../../Hooks/data"; 
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  // useEffect( () => {
-  //   setProjects(placeholderData)
-  // }, [])
   const [error, setError] = useState(null); // State for error handling
   // console.log(placeholderData);
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('https://ashrafulislambackend.vercel.app/projects');
+        const response = await fetch('https://portfolio-backend-0y27.onrender.com/projects');
         if (!response.ok) {
           throw new Error('Network response was not ok');
         }
@@ -25,8 +21,6 @@ const Projects = () => {
         console.error("Error fetching projects:", error);
         // setProjects(placeholderData); // Fallback to local data on error
         setError("");
-      } finally {
-        setLoading(false);
       }
     };
 
