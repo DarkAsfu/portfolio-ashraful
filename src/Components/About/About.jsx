@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const About = () => {
     return (
         <section className="">
-            <div className="mx-4 md:mx-auto max-w-screen-xl bg-[#fff] border rounded-md">
+            <div className="mx-4 md:mx-6 xl:mx-auto max-w-screen-xl bg-[#fff] border rounded-md">
                 <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-16 align-middle items-center px-4 md:pb-0 border-[#0D9488] border-3 rounded-md">
                     <div data-aos="zoom-in-left" className="overflow-hidden rounded-lg sm:h-80 lg:order-last h-64 md:h-96">
                         <img

@@ -13,7 +13,6 @@ const NavBar = () => {
 
     useEffect(() => {
         const handleScroll = () => {
-            // Check if the page is scrolled more than 50 pixels
             if (window.scrollY > 50) {
                 setScrolled(true);
             } else {
@@ -23,17 +22,40 @@ const NavBar = () => {
 
         window.addEventListener('scroll', handleScroll);
 
-        // Clean up the event listener on component unmount
         return () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, []);
 
+    // Load Calendly script dynamically
+    useEffect(() => {
+        const script = document.createElement('script');
+        script.src = 'https://assets.calendly.com/assets/external/widget.js';
+        script.async = true;
+        document.body.appendChild(script);
+
+        return () => {
+            document.body.removeChild(script);
+        };
+    }, []);
+
+    // Handle Calendly popup opening
+    const handleCalendlyClick = (e) => {
+        e.preventDefault();
+        if (window.Calendly) {
+            window.Calendly.initPopupWidget({
+                url: 'https://calendly.com/ashrafulislam1'
+            });
+        } else {
+            console.error('Calendly script not loaded yet');
+        }
+    };
+
     return (
         <header
             className={`sticky top-0 z-50 transition-colors duration-300 ${isScrolled ? 'bg-white' : 'bg-[#ffffff34]'} relative`}
         >
-            <div className="md:mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 md:border md:rounded-md md:mt-4">
+            <div className="md:mx-6 xl:mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 md:border md:rounded-md md:mt-4">
                 <div className="flex h-16 items-center justify-between">
                     <div className="flex-1 md:flex md:items-center md:gap-12">
                         <a className="block text-teal-600" href="/">
@@ -57,8 +79,19 @@ const NavBar = () => {
                                 <li>
                                     <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
                                 </li>
+                                {/* Calendly button */}
+                                <li>
+                                    <a
+                                        href="#"
+                                        className="bg-[#0D9488] text-white transition border-2 border-[#0d948980] rounded-full px-2 py-4"
+                                        onClick={handleCalendlyClick}
+                                    >
+                                        Schedule a call
+                                    </a>
+                                </li>
                             </ul>
                         </nav>
+
                         <div className="flex items-center gap-4 text-[22px] text-[#0D9488]">
                             <div className="flex gap-4">
                                 <Link to="https://github.com/DarkAsfu"><BsGithub /></Link>
@@ -86,6 +119,7 @@ const NavBar = () => {
                     </div>
                 </div>
             </div>
+
             {isMobileMenuOpen && (
                 <div className="absolute top-full left-0 w-full bg-white z-60 border-[#0d948964] border-b-2 border-l-2 border-r-2">
                     <nav aria-label="Global" className="bg-white">
@@ -101,6 +135,15 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <a className="text-gray-500 transition hover:text-gray-500/75" href="/contact"> Contact </a>
+                            </li>
+                            <li className='my-4'>
+                                <a
+                                    href="#"
+                                    className="bg-[#0D9488] text-white transition border-2 border-[#0d948980] rounded-full px-2 py-4"
+                                    onClick={handleCalendlyClick}
+                                >
+                                    Schedule a call
+                                </a>
                             </li>
                         </ul>
                     </nav>
