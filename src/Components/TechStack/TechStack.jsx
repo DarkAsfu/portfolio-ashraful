@@ -1,3 +1,4 @@
+import { Spotlight, SpotLightItem } from '../Test/main-spotlight';
 const TechStack = () => {
     const skills = [
         {
@@ -62,16 +63,19 @@ const TechStack = () => {
         }
     ]
     return (
-        <div className="mb-20 mt-20 px-4" data-aos="fade-up">
+        <div className="mb-20 mt-20 px-4 bg-[#0d948944] py-20" data-aos="fade-up">
             <h1 className="text-4xl font-extrabold text-center">My Technology Stack</h1>
-            <div className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
+            <Spotlight className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
                 {
-                    skills.map((skill, idx) => <div data-aos="zoom-in-up" className="bg-[#0d948915] h-full px-8 py-6 text-center rounded-md hover:bg-[#0d948945] border-2 border-[#0d948945] hover:border-[#0D9488] transition-all" key={idx}>
-                        <img className="w-10 md:w-14 mx-auto" src={skill.iconLink} alt="" />
-                        <h1 className="mt-2 text-[13px] md:text-[14px]">{skill.name}</h1>
-                    </div>)
+                    skills.map((skill, idx) => <SpotLightItem className='bg-[#0d948915] h-full' key={idx}>
+                        <div data-aos="zoom-in-up" className="px-8 py-6 text-center rounded-md transition-all">
+                            <img className="w-10 md:w-14 mx-auto" src={skill.iconLink} alt="" />
+                            <h1 className="mt-2 text-[13px] md:text-[14px]">{skill.name}</h1>
+                        </div>
+                    </SpotLightItem>
+                    )
                 }
-            </div>
+            </Spotlight>
         </div>
     );
 };
