@@ -63,9 +63,9 @@ const TechStack = () => {
         }
     ]
     return (
-        <div className="mb-20 mt-20 px-4 bg-[#0d948944] py-20" data-aos="fade-up">
-            <h1 className="text-4xl font-extrabold text-center">My Technology Stack</h1>
-            <Spotlight className="max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
+        <div className="mb-20 mt-20 px-4" data-aos="fade-up">
+            <h1 className="text-4xl font-extrabold text-center text-[#222222]">My Technology Stack</h1>
+            <Spotlight className="bg-[#0d948969] p-10 max-w-screen-xl mx-auto grid grid-cols-2 md:grid-cols-5 lg:grid-cols-8 gap-4 mt-8 align-middle items-center">
                 {
                     skills.map((skill, idx) => <SpotLightItem className='bg-[#0d948915] h-full' key={idx}>
                         <div data-aos="zoom-in-up" className="px-8 py-6 text-center rounded-md transition-all">

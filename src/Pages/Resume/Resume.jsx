@@ -1,5 +1,3 @@
-
-
 const Resume = () => {
     return (
         <div>
@@ -15,13 +13,12 @@ const Resume = () => {
                             <p className="text-gray-600">+8801777112564</p>
                             <p className="text-gray-600">ashraful.islam0871@gmail.com</p>
                             <div className="mt-2">
-                                <a href="https://ashrafulislam.vercel.app/" className="text-blue-600 hover:underline">Portfolio</a> ·
+                                <a href="https://mdashrafulislam.netlify.app/" className="text-blue-600 hover:underline">Portfolio</a> ·
                                 <a href="https://bd.linkedin.com/in/ashrafulislamm" className="text-blue-600 hover:underline">LinkedIn</a> ·
-                                <a href="https://github.com/Darkasfu" className="text-blue-600 hover:underline">GitHub</a>
+                                <a href="https://github.com/DarkAsfu" className="text-blue-600 hover:underline">GitHub</a>
                             </div>
                         </div>
                     </div>
-
 
                     <section className="mb-6">
                         <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">SKILLS</h2>
@@ -33,6 +30,19 @@ const Resume = () => {
 
                     <section className="mb-6">
                         <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">PROFESSIONAL EXPERIENCE</h2>
+                        <div className="mb-4">
+                            <div className="md:flex justify-between text-[16px]">
+                                <h3 className="text-[16px] md:text-lg font-semibold">SAS Corporation BD</h3>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2023 - Present</p>
+                            </div>
+                            <ul className="list-disc list-inside text-[14px] md:text-[16px]">
+                                <li>Led frontend development efforts using React.js and Next.js to build dynamic, responsive web applications.</li>
+                                <li>Worked closely with design and backend teams to integrate new features and ensure smooth user experiences.</li>
+                                <li>Maintained and improved existing projects while adhering to company coding standards and best practices.</li>
+                                <li>Enhanced project deployment and workflow using tools like Vercel and Netlify.</li>
+                                <li>Key Projects: <a href="https://traveloara-client.vercel.app/" className="text-blue-600 hover:underline">Traveloara</a>, <a href="https://sascorporationbd.com/" className="text-blue-600 hover:underline">SAS Corporation BD</a>, <a href="https://staradagency.vercel.app/" className="text-blue-600 hover:underline">Star Ad Agency</a>.</li>
+                            </ul>
+                        </div>
                         <div className="mb-4">
                             <div className="md:flex justify-between text-[16px]">
                                 <h3 className="text-[16px] md:text-lg font-semibold">Talentship Global Advisory Forum</h3>
@@ -54,7 +64,7 @@ const Resume = () => {
                         <div className="mb-4">
                             <div className="md:flex justify-between items-center">
                                 <h3 className="text-[16px] md:text-lg font-semibold">Learner Cafe</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Live - Client - Server</p>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]"><a href="https://learner-cafe.web.app/" className="text-blue-600 hover:underline">Live</a> - <a href="https://github.com/DarkAsfu/learner-cafe-client" className="text-blue-600 hover:underline">Client</a> - <a href="https://github.com/DarkAsfu/learner-cafe-server" className="text-blue-600 hover:underline">Server</a></p>
                             </div>
                             <ul className="list-disc list-inside text-[14px] md:text-[16px]">
                                 <li>Admin controls: user management, document approvals, and blog uploads with a text editor.</li>
@@ -66,25 +76,14 @@ const Resume = () => {
                             </ul>
                             <p className="mt-2 text-[14px] md:text-[16px]"><span className="font-semibold">Technologies used:</span> HTML, CSS, TailwindCSS, DaisyUI, JavaScript, Firebase Auth, React Js, Node Js, Expressjs, MongoDB etc.</p>
                         </div>
-
                         <div className="mb-4">
-                            <div className="md:flex justify-between">
-                                <h3 className="text-[16px] md:text-lg font-semibold">Summer Camp (Online course portal)</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Live - Client - Server</p>
-                            </div>
-                            <ul className="list-disc list-inside text-[14px] md:text-[16px]">
-                                <li>User Registration and Login (Firebase Authentication): Secure and user-friendly system for users to create accounts and access personalized features.</li>
-                                <li>Use MongoDB CRUD operations for instructors can add classes, manage class details, and receive feedback from students.</li>
-                                <li>Stripe Payment Integration: Seamless integration of the Stripe payment system for secure and convenient class bookings.</li>
-                                <li>Student Dashboard: Dedicated dashboard for students to view selected classes, track payment history, and manage their learning journey.</li>
-                            </ul>
-                            <p className="mt-2 text-[14px] md:text-[16px]"><span className="text-[16px] font-semibold">Technologies used:</span> HTML, CSS, TailwindCSS, DaisyUI, JavaScript, Firebase Auth, React Js, Node Js, Expressjs, MongoDB, JWT, Stripe for payment etc.</p>
-                        </div>
-
-                        <div className="mb-4">
-                            <div className="md:flex justify-between">
+                            <div className="md:flex justify-between items-center">
                                 <h3 className="text-[16px] md:text-lg font-semibold">HR Management</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Client - Server</p>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">
+                                    <a href="https://hr-management-live-link.com" className="text-blue-600 hover:underline">Live</a> - 
+                                    <a href="https://github.com/DarkAsfu/hr-management-client" className="text-blue-600 hover:underline">Client</a>  - 
+                                    <a href="https://github.com/DarkAsfu/hr-management-server" className="text-blue-600 hover:underline">Server</a>
+                                </p>
                             </div>
                             <ul className="list-disc list-inside text-[14px] md:text-[16px]">
                                 <li>Dashboard: Displays total number of employees, departments, and department-wise employee counts.</li>
@@ -93,10 +92,24 @@ const Resume = () => {
                                 <li>Employee Attendance: Manage and track employee attendance.</li>
                                 <li>Department-wise Employee Info: View detailed information of employees categorized by departments.</li>
                             </ul>
-                            <p className="mt-2  text-[14px] md:text-[16px]"><span className="font-semibold">Technologies used:</span> HTML, CSS, TailwindCSS, DaisyUI, JavaScript, Firebase Auth, React Js, Node Js, Expressjs, MySQL etc.</p>
+                            <p className="mt-2 text-[14px] md:text-[16px]">
+                                <span className="font-semibold">Technologies used:</span> HTML, CSS, TailwindCSS, DaisyUI, JavaScript, Firebase Auth, React Js, Node Js, Express.js, MySQL, etc.
+                            </p>
+                        </div>
+                        <div className="mb-4">
+                            <div className="md:flex justify-between">
+                                <h3 className="text-[16px] md:text-lg font-semibold">Summer Camp (Online course portal)</h3>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]"><a href="https://summer-campbd.netlify.app/" className="text-blue-600 hover:underline">Live</a> - <a href="https://github.com/DarkAsfu/summer-camp-client" className="text-blue-600 hover:underline">Client</a> - <a href="https://github.com/DarkAsfu/summer-camp-server" className="text-blue-600 hover:underline">Server</a></p>
+                            </div>
+                            <ul className="list-disc list-inside text-[14px] md:text-[16px]">
+                                <li>User Registration and Login (Firebase Authentication): Secure and user-friendly system for users to create accounts and access personalized features.</li>
+                                <li>Use MongoDB CRUD operations for instructors to add classes, manage class details, and receive feedback from students.</li>
+                                <li>Stripe Payment Integration: Seamless integration of the Stripe payment system for secure and convenient class bookings.</li>
+                                <li>Student Dashboard: Dedicated dashboard for students to view selected classes, track payment history, and manage their learning journey.</li>
+                            </ul>
+                            <p className="mt-2 text-[14px] md:text-[16px]"><span className="text-[16px] font-semibold">Technologies used:</span> HTML, CSS, TailwindCSS, DaisyUI, JavaScript, Firebase Auth, React Js, Node Js, Expressjs, MongoDB, Stripe payments etc.</p>
                         </div>
                     </section>
-
                     <section className="mb-6">
                         <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">EDUCATION</h2>
                         <p className="text-[14px] md:text-[16px]">B.Sc in CSE, Green University of Bangladesh · <span className="italic">2022-present</span></p>
@@ -109,7 +122,7 @@ const Resume = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
 export default Resume;
