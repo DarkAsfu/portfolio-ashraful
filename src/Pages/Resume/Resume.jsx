@@ -33,7 +33,7 @@ const Resume = () => {
                         <div className="mb-4">
                             <div className="md:flex justify-between text-[16px]">
                                 <h3 className="text-[16px] md:text-lg font-semibold">SAS Corporation BD</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2023 - Present</p>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2024 - Present</p>
                             </div>
                             <ul className="list-disc list-inside text-[14px] md:text-[16px]">
                                 <li>Led frontend development efforts using React.js and Next.js to build dynamic, responsive web applications.</li>
