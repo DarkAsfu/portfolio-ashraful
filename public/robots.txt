@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ashrafulislam.vercel.app/sitemap.xml
