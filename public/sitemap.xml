@@ -1,0 +1,33 @@
+<!-- Created with www.mysitemapgenerator.com -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://ashrafulislam.vercel.app/</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ashrafulislam.vercel.app/blogs</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ashrafulislam.vercel.app/contact</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ashrafulislam.vercel.app/resume</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ashrafulislam.vercel.app/dashboard</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://ashrafulislam.vercel.app/addprojects</loc>
+    <lastmod>2025-02-13T10:54:33+01:00</lastmod>
+    <priority>1.0</priority>
+  </url>
+</urlset>
