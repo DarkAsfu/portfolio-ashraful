@@ -37,7 +37,7 @@ const Banner = () => {
                         <div className="mx-auto max-w-xl text-center md:text-left">
                             <h1 className="text-3xl font-extrabold sm:text-[46px] leading-tight">
                                 Are you looking for a
-                                <strong className="font-extrabold text-[#0D9488] sm:block"> Mern Stack Developer? </strong>
+                                <strong className="font-extrabold text-[#0D9488] sm:block"> Frontend Developer? </strong>
                             </h1>
 
                             <p className="mt-4 text-[14px]/relaxed md:text-xl/relaxed">

@@ -6,15 +6,15 @@ const Resume = () => {
                     <div className="md:flex items-center justify-between mb-6">
                         <div>
                             <h1 className="text-2xl md:text-3xl font-bold">Md. Ashraful Islam</h1>
-                            <p className="md:text-lg">MERN Stack Developer</p>
+                            <p className="md:text-lg">Frontend Developer</p>
                             <p className="text-gray-600 mb-6">Dhaka, Bangladesh</p>
                         </div>
                         <div className="md:text-right">
                             <p className="text-gray-600">+8801777112564</p>
-                            <p className="text-gray-600">ashraful.islam0871@gmail.com</p>
+                            <p className="text-gray-600">ashrafulislamdev01@gmail.com</p>
                             <div className="mt-2">
-                                <a href="https://mdashrafulislam.netlify.app/" className="text-blue-600 hover:underline">Portfolio</a> ·
-                                <a href="https://bd.linkedin.com/in/ashrafulislamm" className="text-blue-600 hover:underline">LinkedIn</a> ·
+                                <a href="https://mdashrafulislam.vercel.app/" className="text-blue-600 hover:underline">Portfolio</a> ·
+                                <a href="https://bd.linkedin.com/in/devashraful" className="text-blue-600 hover:underline">LinkedIn</a> ·
                                 <a href="https://github.com/DarkAsfu" className="text-blue-600 hover:underline">GitHub</a>
                             </div>
                         </div>
@@ -22,10 +22,10 @@ const Resume = () => {
 
                     <section className="mb-6">
                         <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">SKILLS</h2>
-                        <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Frontend:</span> HTML5 | CSS3 | JavaScript (ES6+) | TailwindCSS | Bootstrap | DaisyUI | NextUI | ReactJS | React Router | MaterialUI | React Hook Form | React Query</p>
+                        <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Frontend:</span> HTML5 | CSS3 | JavaScript (ES6+) | TailwindCSS | Bootstrap | DaisyUI | NextUI | Shadcn UI | ReactJS | NextJs | React Router | MaterialUI | React Hook Form | React Query | TypeScript (beginner)</p>
                         <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Backend:</span> NodeJs | ExpressJs | Rest API | Firebase Authentication | JWT | Redux (Familiar)</p>
                         <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Database:</span> MongoDB | MySQL</p>
-                        <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Tools:</span> VS Code | Git | Figma | Netlify | Vercel | Surge</p>
+                        <p className="text-[14px] md:text-[16px]"><span className="font-semibold">Tools:</span> VS Code | GitHub | Git | Figma | Netlify | Vercel | Surge | Cpanel | Postman</p>
                     </section>
 
                     <section className="mb-6">
@@ -33,20 +33,20 @@ const Resume = () => {
                         <div className="mb-4">
                             <div className="md:flex justify-between text-[16px]">
                                 <h3 className="text-[16px] md:text-lg font-semibold">SAS Corporation BD</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2023 - Present</p>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2024 - Present</p>
                             </div>
                             <ul className="list-disc list-inside text-[14px] md:text-[16px]">
                                 <li>Led frontend development efforts using React.js and Next.js to build dynamic, responsive web applications.</li>
                                 <li>Worked closely with design and backend teams to integrate new features and ensure smooth user experiences.</li>
                                 <li>Maintained and improved existing projects while adhering to company coding standards and best practices.</li>
                                 <li>Enhanced project deployment and workflow using tools like Vercel and Netlify.</li>
-                                <li>Key Projects: <a href="https://traveloara-client.vercel.app/" className="text-blue-600 hover:underline">Traveloara</a>, <a href="https://sascorporationbd.com/" className="text-blue-600 hover:underline">SAS Corporation BD</a>, <a href="https://staradagency.vercel.app/" className="text-blue-600 hover:underline">Star Ad Agency</a>.</li>
+                                <li>Key Projects: <a href="https://turagwaterfrontresort.com/" className="text-blue-600 hover:underline">Turag Waterfront Resort</a>, <a href="https://traveloara.com/" className="text-blue-600 hover:underline">Traveloara</a>, <a href="https://sascorporationbd.com/" className="text-blue-600 hover:underline">SAS Corporation BD</a>, <a href="https://staradagency.vercel.app/" className="text-blue-600 hover:underline">Star Ad Agency</a>, Fuel Station Management, <a href="https://viptap.club/" className="text-blue-600 hover:underline">Viptap.club</a>.</li>
                             </ul>
                         </div>
                         <div className="mb-4">
                             <div className="md:flex justify-between text-[16px]">
                                 <h3 className="text-[16px] md:text-lg font-semibold">Talentship Global Advisory Forum</h3>
-                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer · Aug 2023 - Oct 2023</p>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">Frontend Developer Intern · Aug 2023 - Oct 2023</p>
                             </div>
                             <ul className="list-disc list-inside text-[14px] md:text-[16px]">
                                 <li>Front-End Development: Contributed to website development using ReactJS, HTML, CSS, and Tailwind.</li>
@@ -60,6 +60,46 @@ const Resume = () => {
 
                     <section className="mb-6">
                         <h2 className="text-[16px] md:text-xl font-bold border-b pb-2 mb-4">PROJECTS</h2>
+
+                        <div className="mb-4">
+                            <div className="md:flex justify-between items-center">
+                                <h3 className="text-[16px] md:text-lg font-semibold">Traveloara</h3>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">
+                                    <a href="https://traveloara.com/" className="text-blue-600 hover:underline">Live</a> - 
+                                    <a href="https://github.com/DarkAsfu/traveloara-client" className="text-blue-600 hover:underline">Client</a> - 
+                                    <a href="https://github.com/DarkAsfu/traveloara-server" className="text-blue-600 hover:underline">Server</a>
+                                </p>
+                            </div>
+                            <ul className="list-disc list-inside text-[14px] md:text-[16px]">
+                                <li>Built multi-role platform (Guest/Host/Admin) with role-switching capability.</li>
+                                <li>Implemented automated 15% service fee system with adjustable rates.</li>
+                                <li>Developed complete booking system with payment integration and reviews.</li>
+                                <li>Created host dashboard for property management + secure payout processing.</li>
+                                <li>Designed admin financial controls for revenue tracking and payouts.</li>
+                            </ul>
+                            <p className="mt-2 text-[14px] md:text-[16px]"><span className="font-semibold">Technologies used:</span> Tailwind CSS, DaisyUI, JavaScript, React.js, Next.js, NextUI, Django, Django Rest Framework, MySQL, SSLCOMMERZ.</p>
+                        </div>
+
+                        <div className="mb-4">
+                            <div className="md:flex justify-between items-center">
+                                <h3 className="text-[16px] md:text-lg font-semibold">Rise Together (Online Crowdfunding System)</h3>
+                                <p className="italic text-gray-600 text-[14px] md:text-[16px]">
+                                    <a href="https://risetogether.netlify.app/" className="text-blue-600 hover:underline">Live</a>
+                                </p>
+                            </div>
+                            <ul className="list-disc list-inside text-[14px] md:text-[16px]">
+                                <li>Built a secure MERN stack crowdfunding platform for disaster relief in Bangladesh.</li>
+                                <li>Integrated SSLCommerz payment gateway for safe real-time donations.</li>
+                                <li>Developed dynamic dashboards for Donors, Fundraisers, and Admins with real-time updates.</li>
+                                <li>Implemented fundraiser verification and admin approval for transparency.</li>
+                                <li>Developed volunteer management and task assignment system to coordinate relief efforts.</li>
+                                <li>Enabled withdrawal requests with proof submission and admin verification.</li>
+                                <li>Provided campaign updates and real-time donation tracking for donors.</li>
+                                <li>Designed responsive UI with Next.js and Tailwind CSS for seamless cross-device experience.</li>
+                                <li>Ensured data security with role-based access control and secure authentication.</li>
+                            </ul>
+                            <p className="mt-2 text-[14px] md:text-[16px]"><span className="font-semibold">Technologies used:</span> Next.js, Tailwind CSS, Shadcn UI, Axios, SSLCOMMERZ, React Hook Form, Node.js, Express.js, MongoDB, npm.</p>
+                        </div>
 
                         <div className="mb-4">
                             <div className="md:flex justify-between items-center">

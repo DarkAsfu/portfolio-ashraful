@@ -95,7 +95,7 @@ const NavBar = () => {
                         <div className="flex items-center gap-4 text-[22px] text-[#0D9488]">
                             <div className="flex gap-4">
                                 <Link to="https://github.com/DarkAsfu"><BsGithub /></Link>
-                                <Link to="https://bd.linkedin.com/in/ashrafulislamm"><FaLinkedinIn /></Link>
+                                <Link to="https://www.linkedin.com/in/devashraful/"><FaLinkedinIn /></Link>
                             </div>
 
                             <div className="block md:hidden">

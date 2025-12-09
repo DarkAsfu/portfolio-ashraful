@@ -19,7 +19,7 @@ const Contact = () => {
                             <div className="text-[14px]">
                                 <h3 className="font-bold text-[18px]">Chat with me</h3>
                                 <p>I'm here to help your project</p>
-                                <p>ashraful.islam0871@gmail.com</p>
+                                <p>ashrafulislamdev01@gmail.com</p>
                             </div>
                         </div>
                         <div className="flex gap-2 mb-8">
